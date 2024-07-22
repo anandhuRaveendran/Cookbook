@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://127.0.0.1:3000",
   })
 );
 
@@ -25,7 +25,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-mongoose.connect("mongodb://localhost:27017/CookRecipe");
+mongoose.connect("mongodb://mongodb:27017/CookRecipe");
 
 const database = mongoose.connection;
 
